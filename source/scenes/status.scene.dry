@@ -92,9 +92,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Technocrats are interested in pragmatic, efficiency-driven reforms and close cooperation with Brüning’s circle of economic and administrative experts.">Technocrats</span>!} strength: [+ technocrats_strength : strength +], dissent: [+ technocrats_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Christian Corporatists are interested in moral, community-centered economics and cooperation with Catholic social reformers and Protestant social ethicists.">Christian Corporatists</span>!} strength: [+ christian corporatists_strength : strength +], dissent: [+ christian corporatists_dissent : dissent +]
+{!<span class="tooltip-text" title="The Christian Corporatists are interested in moral, community-centered economics and cooperation with Catholic social reformers and Protestant social ethicists.">Christian Corporatists</span>!} strength: [+ christian_corporatists_strength : strength +], dissent: [+ christian_corporatists_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Agrarian Traditionalists are interested in preserving rural order, supporting landowners and farmers, and cooperating with conservative agrarian leagues and Prussian land elites.">Agrarian Traditionalist</span>!} strength: [+ agrarian traditionalists_strength : strength +], dissent: [+ agrarian traditionalists_dissent : dissent +]
+{!<span class="tooltip-text" title="The Agrarian Traditionalists are interested in preserving rural order, supporting landowners and farmers, and cooperating with conservative agrarian leagues and Prussian land elites.">Agrarian Traditionalist</span>!} strength: [+ agrarian_traditionalists_strength : strength +], dissent: [+ agrarian_traditionalists_dissent : dissent +]
 
 
 @paramilitaries
