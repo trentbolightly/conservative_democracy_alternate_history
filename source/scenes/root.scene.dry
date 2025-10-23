@@ -50,14 +50,14 @@ Q.factions = ['technocrats', 'christian corporatists', 'agrarian traditionalists
 // should this be normalized to 100%?
 Q.technocrats_strength = 30;
 Q.technocrats_dissent = 0;
-Q.christian corporatists_strength = 25;
-Q.christian corporatists_dissent = 5;
-Q.agrarian traditionalists_strength = 5;
-Q.agrarian traditionalists_dissent = 10;
+Q.christian_corporatists_strength = 25;
+Q.christian_corporatists_dissent = 5;
+Q.agrarian_traditionalists_strength = 5;
+Q.agrarian_traditionalists_dissent = 10;
 
 // secret events...
-Q.agrarian traditionalists_resign = 0;
-Q.christian corporatists_independent = 0;
+Q.agrarian_traditionalists_resign = 0;
+Q.christian_corporatists_independent = 0;
 Q.tecnhocrats_split = 0;
 
 // have we discovered neorevisionism?
@@ -562,7 +562,7 @@ Q.heydebrand_advisor = 0; // Ernst von Heydebrand und der Lasa
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
-!}
+
 set-bg: img/map_2.jpg
 new-page: true
 
@@ -596,8 +596,8 @@ Q.resources = 2;
 Q.dues = 1;
 Q.rb_strength = 2000;
 Q.technocrats_dissent = 25;
-Q.christian corporatists_dissent = 30;
-Q.agrarian traditionalists_dissent = 25;
+Q.christian_corporatists_dissent = 30;
+Q.agrarian_traditionalists_dissent = 25;
 Q.z_relation = 59;
 Q.spd_relation = 19;
 Q.dvp_relation = 30;
