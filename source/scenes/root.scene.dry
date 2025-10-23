@@ -562,7 +562,7 @@ Q.heydebrand_advisor = 0; // Ernst von Heydebrand und der Lasa
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
-
+!}
 set-bg: img/map_2.jpg
 new-page: true
 
@@ -589,7 +589,7 @@ go-to: 1928_main
 
 @1928_historical
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
-on-arrival: 
+on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
 Q.resources = 2;
@@ -603,8 +603,7 @@ Q.spd_relation = 19;
 Q.dvp_relation = 30;
 Q.budget = 2;
 this.state.disableSaves = true; 
-
-
+!}
 go-to: 1928_main
 
 @1928_main
