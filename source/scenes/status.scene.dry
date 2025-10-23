@@ -20,20 +20,18 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+<span style="color: var(--kvp-color);">**[+ kvp_name +]**</span>KVP position: [? if kvp_toleration : toleration ?][? if kvp_in_government : in government - ?][? if kvp_toleration == 0 and kvp_in_government == 0 and kvp_caretaker == 0 : opposition ?][? if kvp_caretaker : caretaker government ?]
+[? if in_bourgeois_coalition and kvp_in_government: Bourgeois Coalition ?][? if in_right_coalition and kvp_in_government: Right Coalition ?][? if in_minority_government and kvp_in_government: minority government ?][? if in_emergency_government and kvp_in_government: emergency government ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
-
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if kvp_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +]
+President: [+ president +] ([?if president_party=="I":<span style="color: #808080;">**I**</span>?][?if president_party=="KPD":<span style="color: #8B0000;">**KPD**</span>?][?if president_party=="SPD":<span style="color: #E3000F;">**SPD**</span>?][?if president_party==ddp_name:<span style="color: #DCCA4A;">**[+ddp_name+]**</span>?][?if president_party==dvp_name:<span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?][?if president_party=="Z":<span style="color: #000000;">**Z**</span>?][?if president_party=="KVP":<span style="color: #455B95;">**KVP**</span>?][?if president_party=="DNVP":<span style="color: #3F7BC1;">**DNVP**</span>?][?if president_party=="DNF":<span style="color: #003755;">**DNF**</span>?][?if president_party=="NSDAP":<span style="color: #954B00;">**NSDAP**</span>?])
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+Chancellor: [+ chancellor +] ([+ chancellor_party +]) ([?if chancellor_party=="SPD":<span style="color: #E3000F;">**SPD**</span>?][?if chancellor_party==ddp_name:<span style="color: #DCCA4A;">**[+ddp_name+]**</span>?][?if chancellor_party==dvp_name:<span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?][?if chancellor_party=="Z":<span style="color: #000000;">**Z**</span>?])
 
 Reichstag composition:
 
@@ -48,6 +46,8 @@ Reichstag composition:
 {!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
 # 1928: 9, 1930: 5
 {!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_r +]%
+# 1928: 0, 1930: 1
+{!<span class="tooltip-text" title="Conservative People's Party" style="color: #455B95;">**KVP**</span>!}: [+ kvp_r +]% ?]
 # 1928: 14, 1930: 7
 {!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
@@ -55,7 +55,7 @@ Reichstag composition:
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if kvp_in_government = 1 : Budget: [+ budget +] ?]
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
@@ -88,9 +88,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
 
-= Internal Factions of the SPD
+= Internal Factions of the KVP
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Technocrats are interested in pragmatic, efficiency-driven reforms and close cooperation with Brüning’s circle of economic and administrative experts.">Technocrats</span>!} strength: [+ _strength : strength +], dissent: [+ left_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
