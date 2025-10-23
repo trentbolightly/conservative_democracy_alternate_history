@@ -96,32 +96,32 @@ Q.lautenbach_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 60;
-Q.kpd_relation = 0;
 Q.spd_relation = 20;
+Q.z_relation = 60;
 Q.ddp_relation = 50;
 Q.dvp_relation = 35;
-// KPD DNVP and NSDAP are invariably hostile
-Q.kpd_relation = 0;
 Q.DNVP_relation = 10;
+// KPD and NSDAP are invariably hostile
+Q.kpd_relation = 0;
 Q.NSDAP_relation = 0;
 
+Q.kvp_leader = "Treviranus"
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
 Q.kpd_party_leader = "Thälmann";
 Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
 Q.z_party_leader = "Marx";
+Q.dnvp_leader = "Hugenberg";
 Q.nsdap_leader = "Hitler";
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
-// whether or not hindenburg can dismiss the government.
-Q.hindenburg_enabled = 0;
 
 
 // Does the SPD lead in Prussia?
 Q.spd_prussia = 1;
+Q.kvp_prussia = 0;
 // Options: spd, z, dnvp, papen, nsdap
 Q.prussian_government = "SPD";
 
@@ -349,6 +349,7 @@ Q.dnvp_in_government = 0;
 Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
 
+// 
 Q.in_right_coalition = 0;
 // Weimar coalition = SPD + Z + DDP
 Q.in_weimar_coalition = 0;
