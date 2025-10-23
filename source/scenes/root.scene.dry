@@ -568,7 +568,7 @@ new-page: true
 
 > *"We are convinced that injustice must become justice and that only through this justice can our fatherland and Europe become happy.”*
 
- - Gottfried Treviranus, in a radio interview by an editor of the Berlin Stock Exchange Curier, August 12, 1930
+ - Gottfried Treviranus, in a radio interview by an editor of the Berliner Börsen-Courier, August 12, 1930
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
@@ -580,11 +580,11 @@ For more information on the politics and government of the German Republic, see 
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; spd_relation = 30; z_relation = 70; dvp_relation = 45; budget = 5;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; technocrats_dissent = 25; christian corporatists_dissent = 30; agrarian tradititionalists_dissent = 25; z_relation = 50; spd_relation = 10; dvp_relation = 25; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -595,13 +595,12 @@ Q.historical_mode = 1;
 Q.resources = 2;
 Q.dues = 1;
 Q.rb_strength = 2000;
-Q.reformist_dissent = 25;
-Q.left_dissent = 30;
-Q.labor_dissent = 25;
-Q.center_dissent = 25;
-Q.z_relation = 41;
-Q.kpd_relation = 16;
-Q.dvp_relation = 31;
+Q.technocrats_dissent = 25;
+Q.christian corporatists_dissent = 30;
+Q.agrarian traditionalists_dissent = 25;
+Q.z_relation = 59;
+Q.spd_relation = 19;
+Q.dvp_relation = 30;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}
@@ -612,10 +611,8 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 1930
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+It is a time of reckoning for Germany. The illusions of stability have faded — the Young Plan has deepened our foreign burdens, and unemployment is rising once more. The nation feels betrayed by both reactionaries who cling to the past and radicals who would destroy order entirely.
 
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
-
-
+Now, the task of the Konservative Volkspartei is clear: to restore faith in responsible leadership. We must bring reason, discipline, and national duty back to public life — not through slogans, but through work. The old parties have failed; only a new conservative realism can save Germany from collapse.
