@@ -538,40 +538,25 @@ Q.march_on_berlin_timer = 0;
 
 // all the initial advisors are technocrats.
 Q.treviranus_advisor = 1; // Gottfried Treviranus
-Q.muller_advisor = 1; // Hans Schlange-Schöningen
-Q.muller_dead = 0;
+Q.schoningen_advisor = 1; // Hans Schlange-Schöningen
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 1; // Rudolf Hilferding
+Q.warmbold_advisor = 1; // Hermann Warmbold
 
-// left advisors
-Q.sender_advisor = 0; // Toni Sender
-Q.levi_advisor = 0; // Paul Levi
-Q.levi_dead = 0;
-Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
-Q.seydewitz_advisor = 0; // Max Seydewitz
+// christian corporatists advisors
+Q.jung_advisor = 0; // Eduard Lejeune-Jung
+Q.kahl_advisor = 0; // Wilhelm Kahl
+Q.hoetzsch_advisor = 0; // Otto Hoetzsch
 
 // centrist alternate advisors
 Q.pfulf_advisor = 0; // Antonie Pfülf
 Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
-// Reformist advisors
-Q.severing_advisor = 0; // Carl Severing
-Q.braun_advisor = 0; // Otto Braun
-Q.juchacz_advisor = 0; // Marie Juchacz
-Q.baade_advisor = 0; // Fritz Baade
+// agrarian traditionalists advisors
+Q.hepp_advisor = 0; // Karl Hepp
+Q.plettenberg_advisor = 0; // Kurt von Plettenberg
+Q.heydebrand_advisor = 0; // Ernst von Heydebrand und der Lasa
 
-// Labor advisors
-Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
-Q.wissell_advisor = 0; // Rudolf Wissell
-
-// Revisionist advisors
-Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
-
-Q.leber_advisor = 0; // Julius Leber (post-1930)
-Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 
 // Nonfactional advisors
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
@@ -581,9 +566,9 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *"We are convinced that injustice must become justice and that only through this justice can our fatherland and Europe become happy.”*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Gottfried Treviranus, in a radio interview by an editor of the Berlin Stock Exchange Curier, August 12, 1930
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
