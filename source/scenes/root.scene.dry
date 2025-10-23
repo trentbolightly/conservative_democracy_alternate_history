@@ -584,7 +584,7 @@ on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; spd_re
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; technocrats_dissent = 25; christian corporatists_dissent = 30; agrarian tradititionalists_dissent = 25; z_relation = 50; spd_relation = 10; dvp_relation = 25; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; technocrats_dissent = 25; christian_corporatists_dissent = 30; agrarian_tradititionalists_dissent = 25; z_relation = 50; spd_relation = 10; dvp_relation = 25; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -602,8 +602,8 @@ Q.z_relation = 59;
 Q.spd_relation = 19;
 Q.dvp_relation = 30;
 Q.budget = 2;
-this.state.disableSaves = true;
-!}
+this.state.disableSaves = true; !}
+
 go-to: 1928_main
 
 @1928_main
