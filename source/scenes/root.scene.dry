@@ -237,7 +237,8 @@ Q.workers_kpd = 20;
 Q.workers_z = 5;
 Q.workers_ddp = 0;
 Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
+Q.workers_kvp = 2;
+Q.workers_dnvp = 3;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
@@ -246,7 +247,8 @@ Q.old_middle_kpd = 0;
 Q.old_middle_z = 5;
 Q.old_middle_ddp= 10;
 Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
+Q.old_middle_kvp = 13;
+Q.old_middle_dnvp = 12;
 Q.old_middle_nsdap = 10;
 Q.old_middle_other = 10;
 
@@ -255,7 +257,8 @@ Q.new_middle_kpd = 1;
 Q.new_middle_z = 10;
 Q.new_middle_ddp= 25;
 Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
+Q.new_middle_kvp = 6;
+Q.new_middle_dnvp = 4;
 Q.new_middle_nsdap = 5;
 Q.new_middle_other = 15;
 
@@ -264,7 +267,8 @@ Q.rural_kpd = 0;
 Q.rural_z = 5;
 Q.rural_ddp= 5;
 Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
+Q.rural_kvp = 15;
+Q.rural_dnvp = 30;
 Q.rural_nsdap = 5;
 Q.rural_other = 10;
 
@@ -273,7 +277,8 @@ Q.unemployed_kpd = 55;
 Q.unemployed_z = 1;
 Q.unemployed_ddp = 0;
 Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
+Q.unemployed_kvp = 2;
+Q.unemployed_dnvp = 3;
 Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
 
@@ -282,25 +287,27 @@ Q.catholics_kpd = 2;
 Q.catholics_z = 50;
 Q.catholics_ddp = 0;
 Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
+Q.catholics_kvp = 2;
+Q.catholics_dnvp = 3;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 12;
 
 
 // Current Reichstag composition
-// % of Reichstag in Jan 1928
+// % of Reichstag in Jan 1930
 // source: wikipedia
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
+Q.spd_r = 31;
+Q.kpd_r = 10;
+Q.z_r = 15;
+Q.ddp_r = 5;
+Q.dvp_r = 9;
+Q.kvp_r = 4;
+Q.dnvp_r = 16;
 Q.nsdap_r = 3;
-Q.other_r = 9;
+Q.other_r = 7;
 
 // diff from prev
 Q.old_spd_r = 26;
@@ -308,6 +315,7 @@ Q.old_kpd_r = 9;
 Q.old_z_r = 17;
 Q.old_ddp_r = 6;
 Q.old_dvp_r = 10;
+Q.old_kvp_r = 0;
 Q.old_dnvp_r = 20;
 Q.old_nsdap_r = 3;
 Q.old_other_r = 9;
@@ -329,14 +337,15 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Hindenburg";
-// starting chancellor: Wilhelm Marx
-Q.chancellor = "Marx";
-Q.chancellor_party = 'Z';
-Q.spd_in_government = 0;
+// starting chancellor: Hermann Müller
+Q.chancellor = "Müller";
+Q.chancellor_party = 'SPD';
+Q.spd_in_government = 1;
 Q.z_in_government = 1;
-Q.ddp_in_government = 0;
+Q.ddp_in_government = 1;
 Q.dvp_in_government = 1;
-Q.dnvp_in_government = 1;
+Q.kvp_in_government = 0;
+Q.dnvp_in_government = 0;
 Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
 
@@ -363,14 +372,14 @@ Q.coalition_dissent = 0;
 // dissent from the KPD, in a popular front or left front government
 Q.kpd_coalition_dissent = 0;
 
-// does the SPD tolerate the government even if it is not a participant?
-Q.spd_toleration = 0;
+// does the KVP tolerate the government even if it is not a participant?
+Q.kvp_toleration = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
+// starting with the 2nd Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
 Q.foreign_minister = 'Streseman';
 Q.foreign_minister_party = 'DVP';
