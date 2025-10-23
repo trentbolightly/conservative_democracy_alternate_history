@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Conservative Democracy: An Alternate History
 
 @start_menu_2
 
@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
+Q.year = 1930;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -46,33 +46,28 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['technocrats', 'christian corporatists', 'agrarian traditionalists'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.technocrats_strength = 30;
+Q.technocrats_dissent = 0;
+Q.christian corporatists_strength = 25;
+Q.christian corporatists_dissent = 5;
+Q.agrarian traditionalists_strength = 5;
+Q.agrarian traditionalists_dissent = 10;
 
 // secret events...
-Q.unions_independent = 0;
-Q.centrists_resign = 0;
-Q.left_split = 0;
-Q.reformists_resigned = 0;
+Q.agrarian traditionalists_resign = 0;
+Q.christian corporatists_independent = 0;
+Q.tecnhocrats_split = 0;
 
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
 
-// crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
+// crisis_urgency indicates how seriously the KVP is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
+// nazi_urgency indicates how seriously the KVP takes the nazis - scale from 0 to 10.
 Q.nazi_urgency = 0;
-// radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
+// radicalization indicates how radical the KVP's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
 Q.wtb_support = 0;
