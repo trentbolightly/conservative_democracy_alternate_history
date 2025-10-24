@@ -61,7 +61,7 @@ go-to: menu
 **1926**: A referendum on the expropriation of the princes, supported by the SPD and KPD, fails.
 
 @curr_gov
-go-to: cabinet if spd_in_government; menu if not spd_in_government
+go-to: cabinet if kvp_in_government; menu if not kvp_in_government
 
 = Current Government
 
@@ -83,18 +83,18 @@ KPD: [+ kpd_r +]%
 # 1928: 9, 1930: 5
 DVP: [+ dvp_r +]%
 # 1928: 14, 1930: 7
+KVP: [+ dvp_r +]%
+# 1928: 0, 1930: 1
 DNVP: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
 NSDAP: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
+# 1928: 9, 1930: 9
 Others: [+ other_r +]%
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+KVP position: [? if kvp_toleration : toleration ?][? if kvp_in_government : in government - ?][? if kvp_toleration == 0 and kvp_in_government == 0 and kvp_caretaker == 0 : opposition ?][? if kvp_caretaker : caretaker government ?]
+[? if in_bourgeois_coalition and kvp_in_government: Bourgeois Coalition ?][? if in_grand_coalition and kvp_in_government: Grand Coalition ?][? if in_right_coalition and kvp_in_government: Right Coalition ?][? if in_kvp_majority and kvp_in_government: KVP majority ?][? if in_minority_government and kvp_in_government: minority government ?][? if in_emergency_government and kvp_in_government: emergency government ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
-
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if kvp_in_government and not in_kvp_majority : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
 @cabinet
 go-to: menu
@@ -178,13 +178,16 @@ KPD: [+ kpd_votes +]%
 # 1928: 9, 1930: 5
 DVP: [+ dvp_votes +]%
 
+# 1928: 0, 1930: 1
+KVP: [+ kvp_votes +]%
+
 # 1928: 14, 1930: 7
 DNVP: [+ dnvp_votes +]%
 
 # 1928: 3, 1930: 18
 NSDAP: [+ nsdap_votes +]%
 
-# 1928: 9, 1930: 10
+# 1928: 9, 1930: 9
 Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
@@ -204,7 +207,11 @@ Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD
 @parties
 go-to: menu
 
-**SPD** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern SPD was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" SPD or USPD, which opposed the war.
+**KVP** – *Konservative Volkspartei* (Conservative People’s Party) – this is us. We are a national, Christian, and republican conservative party born from the break with the reactionary DNVP. We stand for responsible governance, social harmony through Christian ethics, and the renewal of Germany through discipline and efficiency. Guided by the principles of moral duty and practical reform, we reject both socialist class conflict and authoritarian nostalgia. The KVP seeks to unite professionals, farmers, and patriots under a new conservative realism — loyal to the Republic, yet determined to strengthen the state and restore national dignity.
+
+**SPD** - *Sozialdemokratische Partei Deutschlands* (Social Democratic Party of Germany) - a socialist and democratic party of the working class. The party deemed heirs of the legacy of Marx and Engels, Lassalle and Bebel. It is the foremost defenders of the Republic. The modern SPD was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" SPD or USPD, which opposed the war.
+
+Current relations: [+ spd_relation : relationships +]
 
 **Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **BVP** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
 
@@ -284,41 +291,33 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 @factions
 go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
 
-**Internal factions of the SPD**
+**Internal factions of the KVP**
 
 Overall dissent: [+ dissent_percent : dissent +]
 
-**Left**
+**Technocrats**
 
-Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the KPD, and some support extraparliamentary action.
+The Technocrats are interested in pragmatic, efficiency-driven reforms and close cooperation with Brüning’s circle of economic and administrative experts.
 
-Strength: [+ left_strength : strength +]
+Strength: [+ technocrats_strength : strength +]
 
-Dissent: [+ left_dissent : dissent +]
+Dissent: [+ technocrats_dissent : dissent +]
 
-**Centrists**
+**Christian Corporatists**
 
-Centrists in the SPD are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
+The Christian Corporatists are interested in moral, community-centered economics and cooperation with Catholic social reformers and Protestant social ethicists.
 
-Strength: [+ center_strength : strength +]
+Strength: [+ christian_corporatists_strength : strength +]
 
-Dissent: [+ center_dissent : dissent +]
+Dissent: [+ christian_corporatists_dissent : dissent +]
 
-**Labor**
+**Agrarian Traditionalists**
 
-Many SPD members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
+The Agrarian Traditionalists are interested in preserving rural order, supporting landowners and farmers, and cooperating with conservative agrarian leagues and Prussian land elites.
 
-Strength: [+ labor_strength : strength +]
+Strength: [+ agrarian_traditionalists_strength : strength +]
 
-Dissent: [+ labor_dissent : dissent +]
-
-**Reformists**
-
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
-
-Strength: [+ reformist_strength : strength +]
-
-Dissent: [+ reformist_dissent : dissent +]
+Dissent: [+ agrarian_traditionalists_dissent : dissent +]
 
 @neorevisionists
 go-to: menu
@@ -384,6 +383,12 @@ data = data.concat([
         "seats": Q.dvp_r*5,
     },
     {
+        "id": "kvp",
+        "legend": "KVP",
+        "name": "KVP",
+        "seats": Q.kvp_r*5,
+    },
+    {
         "id": "other",
         "legend": "Other",
         "name": "Other",
@@ -420,8 +425,8 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'kvp': '#455B95', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'kvp': 'KVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     if (Q.election_records.length > 0) {
@@ -433,8 +438,8 @@ if (d3 && window) {
     if (!Q.historical_mode || Q.game_over) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'kvp': '#455B95', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'kvp': 'KVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -456,7 +461,7 @@ if (d3 && window) {
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div></td><td>!} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F'> </div></td> <td>!}SPD: {!</td><td>!} [+ spd_r +]% {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div></td> <td> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td></tr>!} ?]
 
@@ -469,6 +474,8 @@ if (d3 && window) {
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} BVP: {!</td><td>!} 3% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#455B95; outline: 2px; outline-style: solid;'> </div></td><td>!} **KVP:** {!</td><td>!} **[+ kvp_r +]%** {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
 
