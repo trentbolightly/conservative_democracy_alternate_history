@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-<span style="color: #455V95;">*KVP*</span> position: [? if kvp_toleration : toleration ?][? if kvp_in_government : in government - ?][? if kvp_toleration == 0 and kvp_in_government == 0 and kvp_caretaker == 0 : opposition ?][? if kvp_caretaker : caretaker government ?]
+<span style="color: #455B95;">**KVP**</span> position: [? if kvp_toleration : toleration ?][? if kvp_in_government : in government - ?][? if kvp_toleration == 0 and kvp_in_government == 0 and kvp_caretaker == 0 : opposition ?][? if kvp_caretaker : caretaker government ?]
 [? if in_bourgeois_coalition and kvp_in_government: Bourgeois Coalition ?][? if in_right_coalition and kvp_in_government: Right Coalition ?][? if in_minority_government and kvp_in_government: minority government ?][? if in_emergency_government and kvp_in_government: emergency government ?]
 
 [? if kvp_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
@@ -75,6 +75,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
+{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_relation : relationships +]
 
 {!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
 
