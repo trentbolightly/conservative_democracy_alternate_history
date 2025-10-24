@@ -421,7 +421,7 @@ if (d3 && window) {
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-var partyColors = {
+    var partyColors = {
     'spd': '#E3000F',
     'kpd': '#8B0000',
     'ddp': '#DCCA4A',
@@ -433,11 +433,7 @@ var partyColors = {
     'other': '#a0a0a0',
     'sapd': '#c40000',
     'bvp': '#D5AC27'
-};
-
-parliament.color(function(d) {
-    return partyColors[d.id] || '#ccc'; // default grey if missing
-});
+    };
 
     d3.select("#reichstag").datum(data).call(parliament);
 
