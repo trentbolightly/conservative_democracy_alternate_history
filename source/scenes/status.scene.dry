@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-<span style="color: var(--kvp-color);">**[+ kvp_name +]**</span>KVP position: [? if kvp_toleration : toleration ?][? if kvp_in_government : in government - ?][? if kvp_toleration == 0 and kvp_in_government == 0 and kvp_caretaker == 0 : opposition ?][? if kvp_caretaker : caretaker government ?]
+<span style="color: #455V95;">*KVP*</span> position: [? if kvp_toleration : toleration ?][? if kvp_in_government : in government - ?][? if kvp_toleration == 0 and kvp_in_government == 0 and kvp_caretaker == 0 : opposition ?][? if kvp_caretaker : caretaker government ?]
 [? if in_bourgeois_coalition and kvp_in_government: Bourgeois Coalition ?][? if in_right_coalition and kvp_in_government: Right Coalition ?][? if in_minority_government and kvp_in_government: minority government ?][? if in_emergency_government and kvp_in_government: emergency government ?]
 
 [? if kvp_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
@@ -29,9 +29,9 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +] ([?if president_party=="I":<span style="color: #808080;">**I**</span>?][?if president_party=="KPD":<span style="color: #8B0000;">**KPD**</span>?][?if president_party=="SPD":<span style="color: #E3000F;">**SPD**</span>?][?if president_party==ddp_name:<span style="color: #DCCA4A;">**[+ddp_name+]**</span>?][?if president_party==dvp_name:<span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?][?if president_party=="Z":<span style="color: #000000;">**Z**</span>?][?if president_party=="KVP":<span style="color: #455B95;">**KVP**</span>?][?if president_party=="DNVP":<span style="color: #3F7BC1;">**DNVP**</span>?][?if president_party=="DNF":<span style="color: #003755;">**DNF**</span>?][?if president_party=="NSDAP":<span style="color: #954B00;">**NSDAP**</span>?])
+President: [+ president +] 
 
-Chancellor: [+ chancellor +] ([?if chancellor_party=="SPD":<span style="color: #E3000F;">**SPD**</span>?][?if chancellor_party==ddp_name:<span style="color: #DCCA4A;">**[+ddp_name+]**</span>?][?if chancellor_party==dvp_name:<span style="color: var(--dvp-color);">**[+ dvp_name +]**</span>?][?if chancellor_party=="Z":<span style="color: #000000;">**Z**</span>?])
+Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
 Reichstag composition:
 
@@ -47,7 +47,7 @@ Reichstag composition:
 # 1928: 9, 1930: 5
 {!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_r +]%
 # 1928: 0, 1930: 1
-{!<span class="tooltip-text" title="Conservative People's Party" style="color: #455B95;">**KVP**</span>!}: [+ kvp_r +]% 
+{!<span class="tooltip-text" title="Conservative People's Party" style="color: #455B95;">KVP</span>!}: [+ kvp_r +]% 
 # 1928: 14, 1930: 7
 {!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
