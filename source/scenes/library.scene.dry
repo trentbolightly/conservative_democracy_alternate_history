@@ -462,7 +462,7 @@ if (d3 && window) {
 
 {!<table>!}
 
-{!<tr><td><div class="box" style='background-color:#455B95'; outline: 2px; outline-style: solid;'> </div> !} **[+ kvp_name +]**: {!</td><td>!} **[+ kvp_r +]%** {!</td><td>!}
+{!<tr><td><div class="box" style='background-color:#455B95; outline: 2px; outline-style: solid;'> </div></td><td>!} **KVP:** {!</td><td>!} **[+ spd_r +]%** {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}KPD: {!</td><td>!} [+ kpd_r +]% {!</td></tr>!}
 
