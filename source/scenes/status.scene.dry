@@ -2,6 +2,15 @@ title: Status
 new-page: true
 is-special: true
 on-arrival: {!
+if (typeof Q.workers_kvp_display === "undefined") {
+    Q.workers_kvp_display = 0;
+    Q.new_middle_kvp_display = 0;
+    Q.old_middle_kvp_display = 0;
+    Q.rural_kvp_display = 0;
+    Q.unemployed_kvp_display = 0;
+    Q.catholics_kvp_display = 0;
+}
+
 if (Q.unemployed) {
     Q.unemployed_2 = Q.unemployed.toFixed(1);
 }
