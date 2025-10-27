@@ -611,7 +611,7 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1929
+= December 1929
 
 It is a time of deep unease in Germany. The world seems prosperous again, yet our own foundations are beginning to tremble. The Young Plan has divided the nation, unemployment is rising, and the great parties have lost the people’s trust. The Republic endures, but without conviction — its leaders speak of legality, while the nation hungers for purpose.
 
