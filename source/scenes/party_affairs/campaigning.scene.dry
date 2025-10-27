@@ -48,7 +48,7 @@ We have increased our campaigning among the old middle class.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_kvp += 4*(1-dissent); if rural_kvp += 3*(1-dissent) if rural_policy >= 2; resources -= 1
+on-arrival: rural_kvp += 4*(1-dissent); resources -= 1
 
 We have increased our campaigning among farmers. [? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
 
