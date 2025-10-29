@@ -3,7 +3,7 @@ subtitle: SPD Chancellor Muller and his second cabinet resigns as President [+ p
 new-page: true
 view-if: spd_in_government = 1 and (year = 1930 and month = 3) and in_grand_coalition = 1
 on-arrival: {!
-Q.chancellor = "Brüning";
+Q.chancellor = "Brüning"; chancellor_party: "z"
 Q.cabinet = "Bourgeois Coalition";
 Q.pro_republic -= 1;
 Q.dvp_defect = 1;
@@ -21,6 +21,8 @@ WIP. Chancellor Hermann Muller of the SPD resigns as President [+ president +] r
 The President appoints Heinrich Brüning to form a minority bourgeois coalition cabinet. However, the President requests that the cabinet Brüning forms *"was to be put together without regard to coalition ties"*. 
 
 This paves way for the first presidential cabinet in the history of the young Republic who is accountable on the whims of the head of state rather than the Reichstag. 
+
+go-to: ministries
 
 @ministries
 
