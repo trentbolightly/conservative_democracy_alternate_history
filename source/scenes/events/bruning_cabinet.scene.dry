@@ -3,12 +3,15 @@ subtitle: SPD Chancellor Muller and his second cabinet resigns as President [+ p
 new-page: true
 view-if: spd_in_government = 1 and (year = 1930 and month = 3) and in_grand_coalition = 1
 on-arrival: {!
-Q.chancellor = "Brüning"; chancellor_party: "z"
+Q.chancellor = "Brüning"; chancellor_party = "z"
 Q.cabinet = "Bourgeois Coalition";
 Q.pro_republic -= 1;
 Q.dvp_defect = 1;
 Q.new_middle_kvp += 2;
 Q.old_middle_kvp += 1;
+Q.in_government = 1;
+Q.in_opposition = 0;
+Q.in_grand_coalition = 0;
 !}
 tags: event
 face-image: img/bruningetcurtius.jpg
