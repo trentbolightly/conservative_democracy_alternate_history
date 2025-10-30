@@ -1,10 +1,6 @@
-title: Appointment of the Brüning Cabinet
-subtitle: SPD Chancellor Muller and his second cabinet resigns as President [+ president +] refuses request to use his presidential decrees.
-new-page: true
 view-if: spd_in_government = 1 and (year = 1930 and month = 3) and in_grand_coalition = 1
 on-arrival: {!
-Q.chancellor = "Brüning"; 
-Q.chancellor_party = "Z"
+Q.chancellor = "Brüning"; Q.chancellor_party = "Z"
 Q.cabinet = "Bourgeois Coalition";
 Q.spd_in_government = 0;
 Q.z_in_government = 1;
@@ -30,46 +26,8 @@ max-visits: 1
 
 = The Brüning cabinet
 
-WIP. Chancellor Hermann Müller of the SPD resigns as President [+ president +] after the President refused his request to issue a presidential decree to solve the unemployment insurance crisis.
+WIP. Chancellor Hermann Muller of the SPD resigns as President [+ president +] refused his request to issue a presidential decree to solve the issue of unemployement insurance crisis. 
 
-The President appoints Heinrich Brüning to form a minority bourgeois coalition cabinet. However, the President requests that the cabinet Brüning forms "was to be put together without regard to coalition ties".
+The President appoints Heinrich Brüning to form a minority bourgeois coalition cabinet. However, the President requests that the cabinet Brüning forms *"was to be put together without regard to coalition ties"*. 
 
-This paves the way for the first presidential cabinet in the history of the young Republic.
-
-choices:
-  - "Continue": ministries_test
-
-@ministries_test
-title: Test ministries screen
-subtitle: Debug – guaranteed option
-on-arrival: {!
-  Q.chancellor = "Bruning";
-  Q.chancellor_party = "Z";
-  Q.z_in_government = 1;
-  Q.kvp_in_government = 1;
-  Q.in_bourgeois_coalition = 1;
-  Q.spd_in_toleration = 1;
-!}
-
-text: |
-  DEBUG: chancellor = [+ Q.chancellor +]
-  DEBUG: chancellor_party = [+ Q.chancellor_party +]
-  DEBUG: in_government = [+ Q.z_in_government +]
-  DEBUG: kvp_in_government = [+ Q.kvp_in_government +]
-
-  This is a forced test option to verify navigation and visibility. If you see this page, the engine is jumping to the ministries label correctly.
-
-choices:
-  - "Take the Test Ministry (guaranteed)": ministries_test_take
-
-@ministries_test_take
-on-arrival: {!
-  Q.kvp_ministry_selected = 1;
-  Q.in_government = 1;
-  Q.kvp_in_government = 1;
-  Q.kvp_ministry = "Test Ministry";
-!}
-text: |
-  You have been given a Test Ministry. This demonstrates that ministry selection can work.
-choices:
-  - "Return to status": return
+This paves way for the first presidential cabinet in the history of the young Republic who is accountable on the whims of the head of state rather than the Reichstag. 
