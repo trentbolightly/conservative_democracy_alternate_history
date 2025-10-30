@@ -51,10 +51,10 @@ on-arrival: {!
 !}
 
 text: |
-  DEBUG: chancellor = [+ Q.debug_chancellor +]
-  DEBUG: chancellor_party = [+ Q.debug_chancellor_party +]
-  DEBUG: in_government = [+ Q.debug_in_government +]
-  DEBUG: kvp_in_government = [+ Q.debug_kvp_in_government +]
+  DEBUG: chancellor = [+ Q.chancellor +]
+  DEBUG: chancellor_party = [+ Q.chancellor_party +]
+  DEBUG: in_government = [+ Q.z_in_government +]
+  DEBUG: kvp_in_government = [+ Q.kvp_in_government +]
 
   This is a forced test option to verify navigation and visibility. If you see this page, the engine is jumping to the ministries label correctly.
 
