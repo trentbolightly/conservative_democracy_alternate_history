@@ -23,7 +23,6 @@ if next_election_month > 12 {
     next_election_month -= 12;
     next_election_year += 1;
 }
-next_election_year = year;
 nationalist_strength += 8;
 pro_republic -= 5;
 new_middle_spd -= 2;
