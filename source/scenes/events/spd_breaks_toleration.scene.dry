@@ -16,20 +16,6 @@ The coalition has fractured — but perhaps there’s still something we can do?
 unavailable-subtitle: There is no realistic way to assuage the <span style="color: #E3000F;">**Social Democrats**</span> now.
 unavailable-if: true
 
-How do we assuage them?
-
-- @welfare: Increase welfare spending.
-- @resources: Use our resources to reduce dissent within the coalition.
-- @let_it_happen: Never mind. Let the vote happen.
-
-@welfare
-unavailable-subtitle: We don't hold Finance or Economic Ministries.
-unavailable-if: true
-
-@resources
-unavailable-subtitle: Resources alone can no longer repair this rift between the socialists and us.
-unavailable-if: true
-
 @let_it_happen
 on-arrival: {!
 spd_in_government = 0; spd_toleration = 0; in_grand_coalition = 0; in_bourgeois_coalition = 1; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; nationalist_strength += 8; pro_republic -= 5; new_middle_spd -= 2; rural_spd -= 2; old_middle_spd -= 2; catholics_spd -= 2; workers_dvp -= 3; new_middle_dvp -= 3; old_middle_z -= 2; rural_z -= 2; !}
