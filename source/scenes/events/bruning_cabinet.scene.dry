@@ -35,7 +35,8 @@ The President appoints Heinrich Brüning to form a minority bourgeois coalition 
 
 This paves way for the first presidential cabinet in the history of the young Republic who is accountable on the whims of the head of state rather than the Reichstag. 
 
-go-to: ministries
+choices:
+  - "Continue": ministries
 
 @ministries
 
