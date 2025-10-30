@@ -42,11 +42,12 @@ choices:
 title: Test ministries screen
 subtitle: Debug – guaranteed option
 on-arrival: {!
-  // show debug values in case something is off
-  Q.debug_chancellor = Q.chancellor;
-  Q.debug_chancellor_party = Q.chancellor_party;
-  Q.debug_in_government = Q.in_government;
-  Q.debug_kvp_in_government = Q.kvp_in_government || 0;
+  Q.chancellor = "Bruning";
+  Q.chancellor_party = "Z";
+  Q.z_in_government = 1;
+  Q.kvp_in_government = 1;
+  Q.in_bourgeois_coalition = 1;
+  Q.spd_in_toleration = 1;
 !}
 
 text: |
