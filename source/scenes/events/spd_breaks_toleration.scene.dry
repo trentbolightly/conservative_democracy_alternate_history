@@ -1,7 +1,7 @@
 title: **SPD** Breaks Toleration!
 subtitle: We have angered the **Social Democrats** too much...
 new-page: true
-view-if: (year = 1930 and month = 4) and spd_toleration = 1
+view-if: (year = 1930 and month = 4) and kvp_in_government = 1
 tags: event
 
 = **SPD** Breaks Toleration!
