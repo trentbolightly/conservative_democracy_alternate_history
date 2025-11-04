@@ -32,8 +32,7 @@ The coalition has fractured beyond repair — new elections are inevitable.
     old_middle_z -= 2;
     rural_z -= 2;
     time_to_election = 3;
-call: set_next_election_time
-}
+call: set_next_election_time }
 
 The vote succeeds, and our government has resigned. Chancellor [+ chancellor +] remains as the head of a caretaker government, but no longer has the power to enact new policies.
 
